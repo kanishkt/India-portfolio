@@ -5,6 +5,8 @@
 @import "mixins";
 @import "base";
 
+@import url("http://fonts.googleapis.com/css?family=Merienda+One");
+
 header{
 	background-color:$black;
 	@include size(100%, 50px);
@@ -21,11 +23,6 @@ header ul
 	float: right;
 }
 
-header .select
-{
-	background-color: rgba(0,0,0,0); //Try to change this value;
-}
-
 header ul li
 {
 	border: 1px solid transparent;
@@ -36,6 +33,11 @@ header ul li
 	margin-right: 5px;
 	padding: 12px 10px 8px 10px;
 	@include transition(margin-right .5s);
+}
+
+header .select
+{
+	background-color: $dark-blue;
 }
 
 .larger-head
@@ -61,7 +63,8 @@ header #title
 	margin-top:20px;
 	margin-left:20px;
 	color:$white;
-	font:$title-font;
+	font: 400 100px/1.2 'Merienda One', Helvetica, sans-serif;
+	font-size:20px;
 }
 
 .larger-head #title
@@ -69,7 +72,7 @@ header #title
 	background-size: 100px 100px;
 	@include size(100px,100px);
 	transition: height .5s, width .5s, background-size .5s;
-	
+	font-size:50px;
 	margin-top:20px;
 }
 
@@ -105,15 +108,17 @@ body
 }
 #part-3
 {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+
+#part-4
+{
 	overflow: hidden;
 	position: relative;
 }
 
-img
-{
-	display: block;
-	margin: 0 auto;
-}
 
 .carosel
 {
@@ -126,19 +131,19 @@ img
 	position: absolute;
 	width: 100px;
 }
-#cleft
+#left
 {
 	left: -50px;
 }
-#cleft #left-arrow
+#left #left-arrow
 {
 	margin-left: 55px;
 }
-#cright
+#right
 {
 	right: -50px;
 }
-#cright #right-arrow
+#right #right-arrow
 {
 	margin-left: 29px;
 }
@@ -150,12 +155,51 @@ img
 {
 	display: none;
 }
+#img4
+{
+	padding-left:60px;
+	cursor:pointer
+}
+
+#img5
+{
+	padding-left:50px;
+	cursor:pointer
+}
+
+#img6
+{
+	padding-left:60px;
+	cursor:pointer
+}
+
+#model
+{
+	column-count: 3;
+	column-gap: 10px; 
+}
+
+#modal-layover
+{
+	background-color: rgba(0,0,0,0.5);
+	color: black;
+	display:none;
+	height: 100%;
+	left: 0;
+	line-height: 400px;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	padding-top:90px;
+	width: 100%;
+	z-index: 100;
+}
 
 video#bgvid {
  right: 0; bottom: 0;
 min-width: 100%; min-height: 100px;
 width: auto; height: auto; z-index: -100;
-background: url(polina.jpg) no-repeat;
+background: no-repeat;
 background-size: cover;
 }
 
@@ -177,12 +221,12 @@ color:$black;
 
 .sectionhead {
 	margin:0 auto;
-	padding-right:150px;
+	padding-right:130px;
 }
 
 .footer {
 	width:100%;
-	height:60px;
+	height:70px;
 	position:relative;
 	left:0px;
 	below:0px;
@@ -194,5 +238,5 @@ color:$black;
 	margin-top:30px;
 	margin-left:10px;
 	bottom:0px;
-	padding-top:10px;
+	padding-top:20px;
 }
