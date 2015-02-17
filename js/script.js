@@ -1,7 +1,10 @@
 $(document).ready(function() {
+    //Variables later used for the carosel
     var a = $("#img1")
     	b = $("#img2"),
     	c = $("#img3");
+    
+    	//sellection auto scroll to the correct part of the page
     $("#part-1-nav").click(function() {
         $("html,body").animate({
             scrollTop: $("#part-1").offset().top - 100
@@ -19,6 +22,8 @@ $(document).ready(function() {
             scrollTop: $("#part-4").offset().top - 50
         }, 500)
     }),
+    
+    //Right and left arrow configuration for the carosel
     $("#right").click(function() {
         return a.is(":visible") ? (a.animate({
             width: "toggle"
@@ -49,6 +54,8 @@ $(document).ready(function() {
             width: "toggle"
         }, 350)) : void 0
     }),
+     
+    //Nav bar resiging and correct component selction in the navbar
      $(window).scroll(function() {
         var a = $("#nav-panel li"),
             b = $(window).scrollTop();
@@ -61,6 +68,7 @@ $(document).ready(function() {
 });
 
 function model_view(){
+	//Showing and hiding a modal
 	$("#modal-layover").show();
 	$("#modal-layover").click(function() {
         $("#modal-layover").hide()
