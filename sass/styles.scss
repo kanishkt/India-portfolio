@@ -4,3 +4,195 @@
 @import "variables";
 @import "mixins";
 @import "base";
+
+header{
+	background-color:$black;
+	@include size(100%, 50px);
+	@include transition(height .6s);
+	position: fixed;
+	z-index: 10;
+	top:0; 
+}
+
+header ul
+{
+	margin-top: 20px;
+	@include transition(margin .6s);
+	float: right;
+}
+
+header .select
+{
+	background-color: rgba(0,0,0,0); //Try to change this value;
+}
+
+header ul li
+{
+	border: 1px solid transparent;
+	border-radius: 5px;
+	cursor: pointer;
+	display: inline;
+	background-color:transparent;
+	margin-right: 5px;
+	padding: 12px 10px 8px 10px;
+	@include transition(margin-right .5s);
+}
+
+.larger-head
+{
+	font-size: 20px;
+	height: 80px;
+}
+.larger-head ul
+{
+	margin-top: 40px;
+}
+.larger-head ul li
+{
+	margin-right: 10px;
+}
+
+header #title
+{
+	@include size(50px, 50px);
+	background-size: 50px 50px;
+	float: left;
+	transition: height .5s, width .5s, background-size .5s;
+	margin-top:20px;
+	margin-left:20px;
+	color:$white;
+	font:$title-font;
+}
+
+.larger-head #title
+{
+	background-size: 100px 100px;
+	@include size(100px,100px);
+	transition: height .5s, width .5s, background-size .5s;
+	
+	margin-top:20px;
+}
+
+body
+{
+	background-color:$white;
+	color: $white;
+	font-family: $font-primary;
+	padding-top: 100px;
+	width: 100%;
+}
+
+.color-1
+{
+	background-color: $white;
+}
+
+.color-2
+{
+	background-color: $grey;
+}
+
+#part-1
+{
+	overflow:hidden;
+	top:20px;
+}
+
+#part-2
+{
+	overflow: hidden;
+	position: relative;
+}
+#part-3
+{
+	overflow: hidden;
+	position: relative;
+}
+
+img
+{
+	display: block;
+	margin: 0 auto;
+}
+
+.carosel
+{
+	background-color: rgba(0,0,0,0.5);
+	border: 1px solid transparent;
+	border-radius: 50%;
+	height: 100px;
+	line-height: 100px;
+	margin-top: 175px;
+	position: absolute;
+	width: 100px;
+}
+#cleft
+{
+	left: -50px;
+}
+#cleft #left-arrow
+{
+	margin-left: 55px;
+}
+#cright
+{
+	right: -50px;
+}
+#cright #right-arrow
+{
+	margin-left: 29px;
+}
+#img2
+{
+	display: none;
+}
+#img3
+{
+	display: none;
+}
+
+video#bgvid {
+ right: 0; bottom: 0;
+min-width: 100%; min-height: 100px;
+width: auto; height: auto; z-index: -100;
+background: url(polina.jpg) no-repeat;
+background-size: cover;
+}
+
+.img{
+	width:100%;
+}
+
+.frimg{
+	@include size(100%,500px);
+}
+
+.sectioninner {
+line-height:30px;
+max-width:550px;
+font-size:18px;
+margin:0 auto;
+color:$black;
+}
+
+.sectionhead {
+	margin:0 auto;
+	padding-right:150px;
+}
+
+.footer {
+	width:100%;
+	height:60px;
+	position:relative;
+	left:0px;
+	below:0px;
+	background:$black;
+}
+
+.sectioninner2{
+	color:$white;
+	margin-top:30px;
+	margin-left:10px;
+	bottom:0px;
+	padding-top:10px;
+}

@@ -1,0 +1,15 @@
+
+
+@mixin border($radius){
+	border-radius:$radius;
+}
+
+@mixin trans($element)
+{
+	transition: $element;
+}
+
+@mixin size($width, $height: $width) {
+      width: $width;
+      height: $height;
+}
