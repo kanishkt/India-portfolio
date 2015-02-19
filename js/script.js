@@ -59,11 +59,40 @@ $(document).ready(function() {
      $(window).scroll(function() {
         var a = $("#nav-panel li"),
             b = $(window).scrollTop();
-        0 >= b ? $("header").addClass("larger-head") : $("header").removeClass("larger-head"), 
-        1000 > b ? (a.removeClass("select"), $("#part-1-nav").addClass("select")) : 
-        1730 > b ? (a.removeClass("select"), $("#part-2-nav").addClass("select")) : 
-        b >2396 ? (a.removeClass("select"), $("#part-4-nav").addClass("select")) : 
-        2395 > b && (a.removeClass("select"), $("#part-3-nav").addClass("select"))
+        var c=  $("#part-1").offset().top;
+        var d=  $("#part-2").offset().top;
+        var e=  $("#part-3").offset().top;
+        var f=  $("#part-4").offset().top;
+        var g=  $("#part-1").height();
+        var h=  $("#part-2").height();
+        var i=  $("#part-3").height();
+        var j=  $("#part-4").height();
+
+        if(0>=b)
+        {
+        	$("header").addClass("larger-head");	
+        }
+
+        else
+        {
+        	$("header").removeClass("larger-head");
+        }
+        if (b >= c && b < (c + g)) {
+            a.removeClass("select");
+            $("#part-1-nav").addClass("select");
+        }
+        if (b >= (d-50) && b < (d + h)) {
+            a.removeClass("select");
+            $("#part-2-nav").addClass("select");
+        }
+      	if (b >= (e-80) && b < ( e + i)) {
+            a.removeClass("select");
+            $("#part-3-nav").addClass("select");
+        }
+        if (b >= (f-50) && b < ( f + j)) {
+            a.removeClass("select");
+            $("#part-4-nav").addClass("select");
+        }
     })
 });
 
